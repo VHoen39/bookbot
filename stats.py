@@ -12,6 +12,12 @@ def count_characters(text):
             count_stats[i] = 1
     return count_stats
 
-testdict = {"a":1}
-testdict["b"] = 2
-print (testdict)
+def sort_on(items):
+    return items["num"]
+
+def sorted_count_characters(character_stats):
+    sorted_list = []
+    for i in character_stats:
+        sorted_list.append({"char": i, "num": character_stats[i]})
+    sorted_list.sort(reverse=True, key = sort_on)
+    return sorted_list
